@@ -1,0 +1,135 @@
+.scrollingWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.card {
+  /* display: inline-block;
+    text-align: center;
+  padding: 14px; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 2px solid #dddddd;
+  border-radius: 30px;
+  min-width: 30%;
+}
+.card button {
+  background-color: #dddddd;
+  border: 1px solid #dddddd;
+  border-radius: 12px;
+}
+
+/* .card:hover {
+     background-color: #777;
+  } */
+
+.vl {
+  border-left: 1px solid #dddddd;
+  height: 70px;
+}
+.body {
+  padding: 1rem;
+}
+.headingBody {
+  padding: 0 2rem;
+}
+
+.heading {
+  display: flex;
+  height: auto;
+  gap: 25px;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.heading h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.datesContainer{
+ display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* align-content: center;
+   flex-wrap: wrap; */
+}
+
+.date{
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    flex-direction : column;
+    margin-top: 1rem;
+    /* align-content: flex-start;
+     flex-wrap: wrap;
+     align-items: flex-end; */
+
+}
+.date p{
+    margin: 0.75rem 0.5rem
+}
+
+.tabContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+}
+
+.tab {
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+
+.matchContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 1.5rem;
+}
+
+.side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.team div {
+    padding: 1rem 1.5rem;
+}
+
+.vs{
+    transform: translateX(-2.5rem);
+}
+.vs p{
+    padding: 0.5rem 0
+}
+
+.time p {
+     padding: 0.5rem 0
+}
+
+.league{
+    margin-left: 2rem;
+}

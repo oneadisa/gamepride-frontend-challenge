@@ -1,0 +1,27 @@
+.body {
+  padding: 1rem;
+}
+.headingBody {
+  padding: 0 2rem;
+}
+
+.heading {
+  display: flex;
+  height: auto;
+  gap: 25px;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.heading h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

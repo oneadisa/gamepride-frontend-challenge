@@ -25,3 +25,142 @@
   justify-content: center;
   align-items: center;
 }
+
+.modalContainer {
+  display: flex;
+  /* border: 2px #cdcdcd;
+  background-color: aqua; */
+  justify-content: space-around;
+  /* flex-direction: row;
+  justify-content: center; */
+}
+
+.modal {
+  align-self: center;
+  border: 12px solid #cdcdcd;
+  background-color: aqua;
+  width: 85%;
+  padding-bottom: 1rem;
+}
+
+.firstRowContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.firstRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* .teamContainer { */
+  /* display: flex;
+  justify-content: space-around; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+/* } */
+
+.team {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.followContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.follow {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 2rem 10%;
+  min-height: 50px;
+  min-width: 70%;
+  background-color: #f10f0f;
+  border: 2px solid #f10f0f;
+  border-radius: 7px;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.tabContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.tabContainer button {
+    cursor: pointer;
+  /* display: inline-block; */
+  font-size: 8px;
+  font-weight: 400;
+  line-height: normal;
+  /* margin: 2rem 10%; */
+  min-height: 30px;
+  min-width: 25%;
+  background-color: #f10f0f;
+  border: 2px solid #f10f0f;
+  border-radius: 7px;
+  /* box-sizing: border-box; */
+  color: #ffffff;
+}
+
+.tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.ratingBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: left;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.ratingBox select {
+    margin: 2rem;
+    width: 60%;
+    height: auto;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid #000000;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-around;
+  align-items: left;
+  text-align: left;
+}
+
+.number{
+    width:20px
+}
+
+.name {
+    width: 150px;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.players{
+    margin-left: 2rem;
+}

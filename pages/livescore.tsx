@@ -1,5 +1,12 @@
 import Head from "next/head";
 import styles from "../styles/Livescore.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendar } from "@fortawesome/free-solid-svg-icons";
+import { faFutbol } from "@fortawesome/free-solid-svg-icons";
+import { faBasketball } from "@fortawesome/free-solid-svg-icons";
+import { faBaseball } from "@fortawesome/free-solid-svg-icons";
+import Image from 'next/image';
+
 
 function Livescore() {
   return (
@@ -13,22 +20,30 @@ function Livescore() {
       <div className={styles.headingBody}>
         <div className={styles.heading}>
           <h1>LIVESCORE</h1>
-          <p>Calendar</p>
+          <h1>
+            <FontAwesomeIcon icon={faCalendar} />
+          </h1>
         </div>
       </div>
       <div className={styles.scrollingWrapper}>
         <div className={styles.card}>
-          <></>
+          <p className={styles.icon}>
+            <FontAwesomeIcon icon={faFutbol} />
+          </p>
           <p>Soccer</p>
           <button>123</button>
         </div>
         <div className={styles.card}>
-          <></>
+          <p className={styles.icon}>
+            <FontAwesomeIcon icon={faBasketball} />
+          </p>
           <p>Basketball</p>
           <button>24</button>
         </div>
         <div className={styles.card}>
-          <></>
+          <p className={styles.icon}>
+            <FontAwesomeIcon icon={faBaseball} />
+          </p>
           <p>Baseball</p>
           <button>123</button>
         </div>
@@ -77,8 +92,17 @@ function Livescore() {
         <hr />
         <div>
           <div className={styles.league}>
-            <></>
-            <h5>Championship</h5>
+            <div className={styles.leagueBox}>
+              <Image
+                width={20}
+                height={20}
+                src="/championship.png"
+                alt="championship logo"
+              />{" "}
+            </div>
+            <div className={styles.leagueBox}>
+              <h5>Championship</h5>
+            </div>
           </div>
           <div className={styles.matchContainer}>
             <div className={styles.side}>
@@ -142,8 +166,12 @@ function Livescore() {
         <hr />
         <div>
           <div className={styles.league}>
-            <></>
-            <h5>Champions League</h5>
+            <div className={styles.leagueBox}>
+              <Image width={20} height={20} src="/ucl.png" alt="CL logo" />
+            </div>
+            <div className={styles.leagueBox}>
+              <h5>Champions League</h5>
+            </div>
           </div>
           <div className={styles.matchContainer}>
             <div className={styles.side}>
@@ -189,15 +217,24 @@ function Livescore() {
         <hr />
         <div>
           <div className={styles.league}>
-            <></>
-            <h5>Premiera Liga</h5>
+            <div className={styles.leagueBox}>
+              <Image
+                width={20}
+                height={20}
+                src="/portugal.png"
+                alt="portugese flag"
+              />
+            </div>
+            <div className={styles.leagueBox}>
+              <h5>Premiera Liga</h5>
+            </div>
           </div>
           <div className={styles.matchContainer}>
             <div className={styles.side}>
               <div className={styles.team}>
                 <div className={styles.time}>
                   <p>23:45</p>
-                  <p>Cancel</p>
+                  <p className={styles.cancelled}>Cancel</p>
                 </div>
                 <div className={styles.vl}></div>
                 <div className={styles.vs}>

@@ -3,6 +3,9 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Leagues.module.css";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendar } from "@fortawesome/free-solid-svg-icons";
+
 const Leagues = () => {
   return (
     <div className={styles.body}>
@@ -15,7 +18,9 @@ const Leagues = () => {
       <div className={styles.headingBody}>
         <div className={styles.heading}>
           <h1>LEAGUES</h1>
-          <p>Calendar</p>
+          <h1>
+          <FontAwesomeIcon icon={faCalendar} />
+          </h1>
         </div>
       </div>
       <div className={styles.modalContainer}>

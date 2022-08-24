@@ -1,9 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faNairaSign } from "@fortawesome/free-solid-svg-icons";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faFreeCodeCamp } from "@fortawesome/free-brands-svg-icons";
 import Navbar from "../components/navbar";
 
@@ -16,28 +17,41 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* &#39 */}
-
-      <div className={styles.heading}>
-        <p className={styles.headingBox}>Premier League</p>
-        <p className={styles.headingBox}>Regular Season</p>
-      </div>
-      <p className={styles.stJamesPark}>St. James&apos; Park</p>
-      <div className={styles.scoreLine}>
-        <div className={styles.scoreLineBox}>
-          <p className={styles.scoreLineBoxItem}>Chelsea Logo</p>
-          <p className={styles.scoreLineBoxItem}>Chelsea</p>
+      <div className={styles.stadium}>
+        <div className={styles.heading}>
+          <p className={styles.headingBox}>Premier League</p>
+          <p className={styles.headingBox}>Regular Season</p>
         </div>
-        <div className={styles.scoreLineBox}>
-          <p className={styles.scoreLineBoxItem}>1 : 0</p>
-          <p className={styles.scoreLineBoxItem}>49 : 30</p>
+        <p className={styles.stJamesPark}>St. James&apos; Park</p>
+        <div className={styles.scoreLine}>
+          <div className={styles.scoreLineBox}>
+            <img
+              src="/chelsea.png"
+              alt="Chelsea logo"
+              // width={20}
+              // height={20}
+              className={styles.avatar}
+            />
+            <p className={styles.club}>Chelsea</p>
+          </div>
+          <div className={styles.scoreLineBox}>
+            <p className={styles.currentScore}>1 : 0</p>
+            <p className={styles.scoreLineBoxItem}>49 : 30</p>
+          </div>
+          <div className={styles.scoreLineBox}>
+            <img
+              src="/leicester.png"
+              alt="Leicester logo"
+              // width={20}
+              // height={20}
+              className={styles.avatar}
+            />
+            <p className={styles.club}>Leicester</p>
+          </div>
         </div>
-        <div className={styles.scoreLineBox}>
-          <p className={styles.scoreLineBoxItem}>Leicester Logo</p>
-          <p className={styles.scoreLineBoxItem}>Leicester</p>
+        <div className={styles.gameCenterContainer}>
+          <button className={styles.gameCenter}>GAME CENTER</button>
         </div>
-      </div>
-      <div className={styles.gameCenterContainer}>
-        <button className={styles.gameCenter}>GAME CENTER</button>
       </div>
       <div className={styles.mainBody}>
         <div className={styles.upperStatsContainer}>
@@ -58,28 +72,31 @@ const Home: NextPage = () => {
         </div>
         <div className={styles.lowerStatsContainer}>
           <div className={styles.lowerStats}>
-            <p>20%</p>
+            <p className={styles.darkLoweStatus}>20%</p>
             <p>{"(4)"}</p>
           </div>
           <div className={styles.lowerStats}>
-            <p>15%</p>
+            <p className={styles.darkLoweStatus}>15%</p>
             <p>{"(3)"}</p>
           </div>
           <div className={styles.lowerStats}>
-            <p>65%</p>
+            <p className={styles.darkLoweStatus}>65%</p>
             <p>{"(13)"}</p>
           </div>
         </div>
-        <hr />
+        <hr className={styles.rule}/>
         <div className={styles.stream}>
           <h2>LIVE STREAM</h2>
           <div className={styles.livePlayContainer}>
             <div className={styles.livePlay}>
-              <button className={styles.play}></button>
+              <button className={styles.play}>
+                 <FontAwesomeIcon icon={faPlay} size="1x" />
+              
+              </button>
               <h4>Chelsea - Manchester City</h4>
               <p>Livestream</p>
             </div>
-            <p>
+            <p className={styles.lastSen}>
               Estoril and Santa Carla will play each other on Monday, November
               29th, 2021.
             </p>

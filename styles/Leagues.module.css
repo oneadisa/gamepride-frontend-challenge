@@ -1,6 +1,25 @@
 .body {
-  padding: 1rem;
+  /* padding: 1rem; */
+  /* z-index: 4; */
+  /* background-color: #0b111b; */
+  /* padding-top: 40vh; */
+  background: linear-gradient(
+    to bottom,
+    #0b111b 0%,
+    #0b111b 20%,
+    #f5f5f5 20%,
+    #f5f5f5 100%
+  );
+  height: 100%;
 }
+
+.upperBody {
+  /* z-index: -2; */
+  background-color: #f5f5f5;
+  width: 100vw;
+  height: -40vh;
+}
+
 .headingBody {
   padding: 0 2rem;
 }
@@ -33,14 +52,27 @@
   justify-content: space-around;
   /* flex-direction: row;
   justify-content: center; */
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 .modal {
   align-self: center;
-  border: 12px solid #cdcdcd;
-  background-color: aqua;
+  border: 1px solid #cdcdcd;
+  border-radius: 20px;
+  
+  font-size: 3.5vw;
+  background-color: #fcfcfc;
   width: 85%;
-  padding-bottom: 1rem;
+  /* padding-bottom: 1rem; */
+  color: #424242;
+}
+
+.plLogo {
+  width: 20vw;
+  max-width: 250px;
+  /* width: 100%; */
+  height: auto;
+  margin-top: 4vh;
 }
 
 .firstRowContainer {
@@ -57,10 +89,10 @@
 }
 
 /* .teamContainer { */
-  /* display: flex;
+/* display: flex;
   justify-content: space-around; */
-  /* flex-direction: column; */
-  /* justify-content: center; */
+/* flex-direction: column; */
+/* justify-content: center; */
 /* } */
 
 .team {
@@ -73,12 +105,13 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); */
 }
 
 .follow {
   cursor: pointer;
   display: inline-block;
-  font-size: 13px;
+  font-size: 3.5vw;
   font-weight: 400;
   line-height: normal;
   margin: 2rem 10%;
@@ -89,6 +122,7 @@
   border-radius: 7px;
   box-sizing: border-box;
   color: #ffffff;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 .tabContainer {
@@ -97,27 +131,48 @@
   justify-content: space-evenly;
 }
 
-.tabContainer button {
-    cursor: pointer;
-  /* display: inline-block; */
-  font-size: 8px;
-  font-weight: 400;
-  line-height: normal;
-  /* margin: 2rem 10%; */
-  min-height: 30px;
-  min-width: 25%;
-  background-color: #f10f0f;
-  border: 2px solid #f10f0f;
-  border-radius: 7px;
-  /* box-sizing: border-box; */
-  color: #ffffff;
+/* .tabContainer button {
+  
+} */
+.league {
+  /* margin-left: 2rem; */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.leagueBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tab {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  cursor: pointer;
+  /* display: inline-block; */
+  font-size: 3vw;
+  font-weight: 400;
+  line-height: normal;
+  /* margin: 2rem 10%; */
+  min-height: 30px;
+  min-width: 25%;
+  background-color: #fcfcfc;
+  border: 1px solid #fcfcfc;
+  /* border-radius: 7px; */
+  /* box-sizing: border-box; */
+  color: #898787;
+}
+.tab:hover {
+  /* border-bottom: 2px solid #f10f0f; */
+  color: #f10f0f;
+}
+
+.tab:active {
+  border-bottom: 2px solid #f10f0f;
+  color: #f10f0f;
 }
 
 .ratingBox {
@@ -128,15 +183,20 @@
   text-align: left;
   align-content: center;
   flex-wrap: wrap;
+  
 }
 
 .ratingBox select {
-    margin: 2rem;
-    width: 60%;
-    height: auto;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border: 2px solid #000000;
+  margin: 2rem;
+  width: 60%;
+  height: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 3vw;
+  font-weight: bold;
+  background-color: #fcfcfc;
+  border: 1px solid #c0c0c0;
+  border-radius: 2vw;
 }
 
 .rating {
@@ -146,12 +206,34 @@
   text-align: left;
 }
 
-.number{
-    width:20px
+.rating button {
+  
+  font-size: 3vw;
+  min-width: 12vw;
+  max-width: 8vw;
+  height: auto;
+  padding: 10px;
+  color: #fcfcfc;
+  background-color: #fcd36c;
+  border: 1px solid #fcd36c;
+  border-radius: 25%;
+cursor: pointer;
+  display: inline-block;
+}
+
+.top {
+  color: rgb(229, 227, 227);
+  background-color: #55ff2f;
+  border: 1px solid #55ff2f;
+  border-radius: 10px;
+}
+
+.number {
+  width: 20px;
 }
 
 .name {
-    width: 150px;
+  width: 150px;
 }
 
 .avatar {
@@ -161,6 +243,40 @@
   border-radius: 50%;
 }
 
-.players{
-    margin-left: 2rem;
+.players {
+  margin-left: 10vw;
+  color: #0b111b;
+  margin-top: 2rem;
+  
+}
+
+.rating {
+  color: #0b111b;
+}
+
+.ratingBox {
+  color: #0b111b;
+}
+
+.modalTwoContainer{
+ display: grid
+}
+
+.modalTwo{
+border: 1px solid #cdcdcd;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  background-color: #fcfcfc;
+  width: 85%;
+  place-self: center;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  /* display : flex; */
+    /* justify-content : center; */
+    /* align-items : center; */
+
+}
+
+.leagueBox p{
+  margin-left: 10px;
+  margin-right: 10px;
 }

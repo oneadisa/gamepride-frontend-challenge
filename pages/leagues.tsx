@@ -2,7 +2,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Leagues.module.css";
-
+import Navbar from "../components/navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar } from "@fortawesome/free-solid-svg-icons";
 
@@ -19,14 +19,22 @@ const Leagues = () => {
         <div className={styles.heading}>
           <h1>LEAGUES</h1>
           <h1>
-          <FontAwesomeIcon icon={faCalendar} />
+            <FontAwesomeIcon icon={faCalendar} />
           </h1>
         </div>
       </div>
       <div className={styles.modalContainer}>
         <div className={styles.modal}>
           <div className={styles.firstRowContainer}>
-            <div className={styles.firstRow}>PL Logo</div>
+            <div className={styles.firstRow}>
+              <img
+                src="/plLogo.png"
+                alt="PL logo"
+                // width={20}
+                // height={20}
+                className={styles.plLogo}
+              />
+            </div>
 
             <div className={styles.firstRow}>
               <div className={styles.teamContainer}>
@@ -34,13 +42,31 @@ const Leagues = () => {
                   <h2 className="">Premier League</h2>
                 </div>
                 <div className={styles.team}>
-                  <div>
-                    <p></p>
-                    <p>England</p>
+                  <div className={styles.league}>
+                    <div className={styles.leagueBox}>
+                      <Image
+                        width={20}
+                        height={20}
+                        src="/england.png"
+                        alt="england"
+                      />{" "}
+                    </div>
+                    <div className={styles.leagueBox}>
+                      <p>England</p>
+                    </div>
                   </div>
-                  <div>
-                    <p></p>
-                    <p>20 Teams</p>
+                  <div className={styles.league}>
+                    <div className={styles.leagueBox}>
+                      <Image
+                        width={20}
+                        height={20}
+                        src="/group.png"
+                        alt="group"
+                      />{" "}
+                    </div>
+                    <div className={styles.leagueBox}>
+                      <p>20 Teams</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -59,237 +85,240 @@ const Leagues = () => {
       <div className={styles.players}>
         <h2>TOP PLAYERS</h2>
       </div>
-      <div>
-        <div className={styles.ratingBox}>
-          <select className="">
-            <option value="volvo">Ratings</option>
-            <option value="saab">Statistics</option>
-            <option value="opel">Figures</option>
-            {/* <option value="audi">Audi</option> */}
-          </select>
-          {/* <select></select> */}
-        </div>
-        <div className={styles.rating}>
-          <p className={styles.number}>1</p>
-          <div>
-            <Image
-              src="/vercel.svg"
-              alt="Avatar"
-              width={50}
-              height={50}
-              className={styles.avatar}
-            />
+      <div className={styles.modalTwoContainer}>
+        <div className={styles.modalTwo}>
+          <div className={styles.ratingBox}>
+            <select className="">
+              <option value="volvo">Ratings</option>
+              <option value="saab">Statistics</option>
+              <option value="opel">Figures</option>
+              {/* <option value="audi">Audi</option> */}
+            </select>
+            {/* <select></select> */}
           </div>
-          <div className={styles.name}>
-            <strong>Romelu Lukaku</strong>
-            {/* <br /> */}
-            <p>Defensive Midfielder</p>
+          <div className={styles.rating}>
+            <p className={styles.number}>1</p>
+            <div>
+              <Image
+                src="/footballer.png"
+                alt="Avatar"
+                width={50}
+                height={50}
+                className={styles.avatar}
+              />
+            </div>
+            <div className={styles.name}>
+              <strong>Romelu Lukaku</strong>
+              {/* <br /> */}
+              <p>Defensive Midfielder</p>
+            </div>
+            <div>
+              <p>
+                <button>8.03</button>
+              </p>
+            </div>
           </div>
-          <div>
-            <p>
-              <button>8.03</button>
-            </p>
+          <div className={styles.rating}>
+            <p className={styles.number}> 2</p>
+            <div>
+              <Image
+                src="/footballer.png"
+                alt="Avatar"
+                width={50}
+                height={50}
+                className={styles.avatar}
+              />
+            </div>
+            <div className={styles.name}>
+              <strong>Goran Čaušić</strong>
+              <br />
+              <p>Central Midfielder</p>
+            </div>
+            <div>
+              <p>
+                <button className={styles.top}>7.90</button>
+              </p>
+            </div>
           </div>
-        </div>
-        <div className={styles.rating}>
-          <p className={styles.number}> 2</p>
-          <div>
-            <Image
-              src="/vercel.svg"
-              alt="Avatar"
-              width={50}
-              height={50}
-              className={styles.avatar}
-            />
+          <div className={styles.rating}>
+            <p className={styles.number}>3</p>
+            <div>
+              <Image
+                src="/footballer.png"
+                alt="Avatar"
+                width={50}
+                height={50}
+                className={styles.avatar}
+              />
+            </div>
+            <div className={styles.name}>
+              <strong>Francesco Caputo</strong>
+              <br />
+              <p>Attacking Midfielder</p>
+            </div>
+            <div>
+              <p>
+                <button>7.90</button>
+              </p>
+            </div>
           </div>
-          <div className={styles.name}>
-            <strong>Goran Čaušić</strong>
-            <br />
-            <p>Central Midfielder</p>
+          <div className={styles.rating}>
+            <p className={styles.number}>4</p>
+            <div>
+              <Image
+                src="/footballer.png"
+                alt="Avatar"
+                width={50}
+                height={50}
+                className={styles.avatar}
+              />
+            </div>
+            <div className={styles.name}>
+              <strong>Randol Kolo Mauni</strong>
+              <br />
+              <p>Right Midfielder</p>
+            </div>
+            <div>
+              <p>
+                <button>7.88</button>
+              </p>
+            </div>
           </div>
-          <div>
-            <p>
-              <button>7.90</button>
-            </p>
+          <div className={styles.rating}>
+            <p className={styles.number}>5</p>
+            <div>
+              <Image
+                src="/footballer.png"
+                alt="Avatar"
+                width={50}
+                height={50}
+                className={styles.avatar}
+              />
+            </div>
+            <div className={styles.name}>
+              <strong>Robin Pröpper</strong>
+              <br />
+              <p>Defensive Midfielder</p>
+            </div>
+            <div>
+              <p>
+                <button>7.87</button>
+              </p>
+            </div>
           </div>
-        </div>
-        <div className={styles.rating}>
-          <p className={styles.number}>3</p>
-          <div>
-            <Image
-              src="/vercel.svg"
-              alt="Avatar"
-              width={50}
-              height={50}
-              className={styles.avatar}
-            />
+          <div className={styles.rating}>
+            <p className={styles.number}>6</p>
+            <div>
+              <Image
+                src="/footballer.png"
+                alt="Avatar"
+                width={50}
+                height={50}
+                className={styles.avatar}
+              />
+            </div>
+            <div className={styles.name}>
+              <strong>Axel Witsel</strong>
+              <br />
+              <p>Defensive Winger</p>
+            </div>
+            <div>
+              <p>
+                <button>7.65</button>
+              </p>
+            </div>
           </div>
-          <div className={styles.name}>
-            <strong>Francesco Caputo</strong>
-            <br />
-            <p>Attacking Midfielder</p>
+          <div className={styles.rating}>
+            <p className={styles.number}>7</p>
+            <div>
+              <Image
+                src="/footballer.png"
+                alt="Avatar"
+                width={50}
+                height={50}
+                className={styles.avatar}
+              />
+            </div>
+            <div className={styles.name}>
+              <strong>Phillip Lahm</strong>
+              <br />
+              <p>Right Winger</p>
+            </div>
+            <div>
+              <p>
+                <button>7.65</button>
+              </p>
+            </div>
           </div>
-          <div>
-            <p>
-              <button>7.90</button>
-            </p>
+          <div className={styles.rating}>
+            <p className={styles.number}>8</p>
+            <div>
+              <Image
+                src="/footballer.png"
+                alt="Avatar"
+                width={50}
+                height={50}
+                className={styles.avatar}
+              />
+            </div>
+            <div className={styles.name}>
+              <strong>Gerd Müller</strong>
+              <br />
+              <p>Goalkeeper</p>
+            </div>
+            <div>
+              <p>
+                <button>7.62</button>
+              </p>
+            </div>
           </div>
-        </div>
-        <div className={styles.rating}>
-          <p className={styles.number}>4</p>
-          <div>
-            <Image
-              src="/vercel.svg"
-              alt="Avatar"
-              width={50}
-              height={50}
-              className={styles.avatar}
-            />
+          <div className={styles.rating}>
+            <p className={styles.number}>9</p>
+            <div>
+              <Image
+                src="/footballer.png"
+                alt="Avatar"
+                width={50}
+                height={50}
+                className={styles.avatar}
+              />
+            </div>
+            <div className={styles.name}>
+              <strong>Mikel Arteta</strong>
+              <br />
+              <p>Striker</p>
+            </div>
+            <div>
+              <p>
+                <button>7.44</button>
+              </p>
+            </div>
           </div>
-          <div className={styles.name}>
-            <strong>Randol Kolo Mauni</strong>
-            <br />
-            <p>Right Midfielder</p>
-          </div>
-          <div>
-            <p>
-              <button>7.88</button>
-            </p>
-          </div>
-        </div>
-        <div className={styles.rating}>
-          <p className={styles.number}>5</p>
-          <div>
-            <Image
-              src="/vercel.svg"
-              alt="Avatar"
-              width={50}
-              height={50}
-              className={styles.avatar}
-            />
-          </div>
-          <div className={styles.name}>
-            <strong>Robin Pröpper</strong>
-            <br />
-            <p>Defensive Midfielder</p>
-          </div>
-          <div>
-            <p>
-              <button>7.87</button>
-            </p>
-          </div>
-        </div>
-        <div className={styles.rating}>
-          <p className={styles.number}>6</p>
-          <div>
-            <Image
-              src="/vercel.svg"
-              alt="Avatar"
-              width={50}
-              height={50}
-              className={styles.avatar}
-            />
-          </div>
-          <div className={styles.name}>
-            <strong>Axel Witsel</strong>
-            <br />
-            <p>Defensive Winger</p>
-          </div>
-          <div>
-            <p>
-              <button>7.65</button>
-            </p>
-          </div>
-        </div>
-        <div className={styles.rating}>
-          <p className={styles.number}>7</p>
-          <div>
-            <Image
-              src="/vercel.svg"
-              alt="Avatar"
-              width={50}
-              height={50}
-              className={styles.avatar}
-            />
-          </div>
-          <div className={styles.name}>
-            <strong>Phillip Lahm</strong>
-            <br />
-            <p>Right Winger</p>
-          </div>
-          <div>
-            <p>
-              <button>7.65</button>
-            </p>
-          </div>
-        </div>
-        <div className={styles.rating}>
-          <p className={styles.number}>8</p>
-          <div>
-            <Image
-              src="/vercel.svg"
-              alt="Avatar"
-              width={50}
-              height={50}
-              className={styles.avatar}
-            />
-          </div>
-          <div className={styles.name}>
-            <strong>Gerd Müller</strong>
-            <br />
-            <p>Goalkeeper</p>
-          </div>
-          <div>
-            <p>
-              <button>7.62</button>
-            </p>
-          </div>
-        </div>
-        <div className={styles.rating}>
-          <p className={styles.number}>9</p>
-          <div>
-            <Image
-              src="/vercel.svg"
-              alt="Avatar"
-              width={50}
-              height={50}
-              className={styles.avatar}
-            />
-          </div>
-          <div className={styles.name}>
-            <strong>Mikel Arteta</strong>
-            <br />
-            <p>Striker</p>
-          </div>
-          <div>
-            <p>
-              <button>7.44</button>
-            </p>
-          </div>
-        </div>
-        <div className={styles.rating}>
-          <p className={styles.number}>10</p>
-          <div>
-            <Image
-              src="/vercel.svg"
-              alt="Avatar"
-              width={50}
-              height={50}
-              className={styles.avatar}
-            />
-          </div>
-          <div className={styles.name}>
-            <strong>Virgl Casémiro</strong>
-            <br />
-            <p>Left Winger</p>
-          </div>
-          <div>
-            <p>
-              <button>7.37</button>
-            </p>
+          <div className={styles.rating}>
+            <p className={styles.number}>10</p>
+            <div>
+              <Image
+                src="/footballer.png"
+                alt="Avatar"
+                width={50}
+                height={50}
+                className={styles.avatar}
+              />
+            </div>
+            <div className={styles.name}>
+              <strong>Virgl Casémiro</strong>
+              <br />
+              <p>Left Winger</p>
+            </div>
+            <div>
+              <p>
+                <button>7.37</button>
+              </p>
+            </div>
           </div>
         </div>
       </div>
+      <Navbar />
     </div>
   );
 };

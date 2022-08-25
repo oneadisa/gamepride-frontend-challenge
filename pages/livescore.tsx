@@ -5,8 +5,8 @@ import { faCalendar } from "@fortawesome/free-solid-svg-icons";
 import { faFutbol } from "@fortawesome/free-solid-svg-icons";
 import { faBasketball } from "@fortawesome/free-solid-svg-icons";
 import { faBaseball } from "@fortawesome/free-solid-svg-icons";
-import Image from 'next/image';
-
+import Image from "next/image";
+import Navbar from "../components/navbar";
 
 function Livescore() {
   return (
@@ -271,6 +271,7 @@ function Livescore() {
           </div>
         </div>
       </section>
+      <Navbar />
     </div>
   );
 }

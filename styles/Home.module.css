@@ -58,6 +58,7 @@
   border-radius: 7px;
   box-sizing: border-box;
   color: #ffffff;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 @media screen and (min-width: 800px) {
 .gameCenter {
@@ -165,7 +166,7 @@ background-size: cover;
   display: flex;
   flex-direction: column;
   color: #f4f3f3; 
-
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 .lastSen{

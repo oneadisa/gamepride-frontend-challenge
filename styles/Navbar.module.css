@@ -1,21 +1,53 @@
-.container {
-  height: 8vh;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  margin: 10px;
-  background-color: #a1a1a1;
-  border: 1px solid #a1a1a1;
-  opacity: 0.5;
-  border-radius: 8px;
-   display : flex;
-   gap : 15%;
-   align-content: center;
-    flex-wrap: wrap;
+.bigContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  /* justify-content: space-evenly; */
 }
 
-.icon {
-    flex-direction : row;
-    justify-content: space-around;
-    
+.container {
+  /* align-self: center;
+  height: 4vh;
+  position: fixed;
+  bottom: 0;
+  width: 80vw;
+  background-color: #a1a1a1;
+  border: 1px solid #a1a1a1;
+  opacity: 1;
+  border-radius: 20%;
+   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 2rem; */
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  width: 85vw;
+  margin-bottom: 2rem;
+  background-color: #807f7f;
+  border: 1px solid  #807f7f;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 20px;
+  opacity: 0.8;
+}
+
+.icon:hover {
+
+    color: #fcfcfc;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1rem;
+  cursor: pointer;
+  padding-top: 1rem;
+  padding-bottom: 
+  1rem; */
+}
+
+.icon:active{
+    color: #fcfcfc;
 }

@@ -107,6 +107,7 @@
   background-color: #f10f0f;
   border: 1px solid #f10f0f;
   border-radius: 3px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 .date p {
